@@ -6,7 +6,7 @@
   <link href="https://cdzonline.github.io/atom.xml" rel="self"/>
   
   <link href="https://cdzonline.github.io/"/>
-  <updated>2021-12-29T16:09:25.416Z</updated>
+  <updated>2021-12-29T16:34:05.809Z</updated>
   <id>https://cdzonline.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客搭建过程随记</title>
+    <link href="https://cdzonline.github.io/2021/12/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E9%9A%8F%E8%AE%B0/"/>
+    <id>https://cdzonline.github.io/2021/12/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E9%9A%8F%E8%AE%B0/</id>
+    <published>2021-12-29T16:19:32.000Z</published>
+    <updated>2021-12-29T16:34:05.809Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建HEXO博客过程随记"><a href="#搭建HEXO博客过程随记" class="headerlink" title="搭建HEXO博客过程随记"></a>搭建HEXO博客过程随记</h2><pre><code>npm install hexo-cli -g</code></pre><h3 id="检查hexo安装是否成功："><a href="#检查hexo安装是否成功：" class="headerlink" title="检查hexo安装是否成功："></a>检查hexo安装是否成功：</h3><pre><code>hexo -v</code></pre><h3 id="设置npm全局地址"><a href="#设置npm全局地址" class="headerlink" title="设置npm全局地址"></a>设置npm全局地址</h3><pre><code>npm config set prefix &quot;E:\Documents\WWW\nodejs\node_global&quot;npm config set cache &quot;E:\Documents\WWW\nodejs\node_cache&quot;</code></pre><h3 id="把public改名为用户名-github-io"><a href="#把public改名为用户名-github-io" class="headerlink" title="把public改名为用户名.github.io"></a>把public改名为用户名.github.io</h3><p><em>注1：后面实际验证，有时并不需要这么做，原因未知</em></p><p><em>注2：把主分支改成master，在_config.yml文件和网页的Setting的Branch里更改</em></p><p>再复制粘贴以下代码,git执行：  </p><pre><code>git branch -m main mastergit fetch origingit branch -u origin/master mastergit remote set-head origin -a</code></pre><p>然后网页可以显示正常博文了，标题和内容（包括图片和超链接）都一切正常。Good job!!</p><p>最后：<br>npm install hexo-deployer-git –save<br>卸载命令站内搜索：npm uninstall hexo-generator-search<br>                                npm uninstall hexo-generator-searchdb</p><pre><code>hexo g    //生成博客hexo s     //本地预览博客hexo d     //发布博客</code></pre><h3 id="重装gulp"><a href="#重装gulp" class="headerlink" title="重装gulp"></a>重装gulp</h3><pre><code>npm install -g gulphexo clean &amp;&amp; hexo g  //清空缓存并生成静态文件</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;搭建HEXO博客过程随记&quot;&gt;&lt;a href=&quot;#搭建HEXO博客过程随记&quot; class=&quot;headerlink&quot; title=&quot;搭建HEXO博客过程随记&quot;&gt;&lt;/a&gt;搭建HEXO博客过程随记&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;npm install hexo-cli -</summary>
+      
+    
+    
+    
+    <category term="网站建设" scheme="https://cdzonline.github.io/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+    <category term="Hexo博客搭建" scheme="https://cdzonline.github.io/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>VM虚拟机安装macOS注意事项之AMD篇</title>
