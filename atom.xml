@@ -6,7 +6,7 @@
   <link href="https://cdzonline.github.io/atom.xml" rel="self"/>
   
   <link href="https://cdzonline.github.io/"/>
-  <updated>2021-12-29T16:03:53.119Z</updated>
+  <updated>2021-12-29T16:08:02.740Z</updated>
   <id>https://cdzonline.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cdzonline.github.io/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/"/>
     <id>https://cdzonline.github.io/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/</id>
     <published>2021-12-29T15:50:32.000Z</published>
-    <updated>2021-12-29T16:03:53.119Z</updated>
+    <updated>2021-12-29T16:08:02.740Z</updated>
     
     <content type="html"><![CDATA[<p>VM虚拟机需要安装unlocker3.0（最新版）才能破解并安装macOS,程序可到Github下载<br>VM虚拟机安装：选择Workstation 10.x  </p><p>虚拟机设置：USB控制器–选择USB2.0并显示所有USB设备</p><p>打开macOS虚拟机安装目录，修改.vmx文件—-保存  </p><pre><code>smc.version = 0cpuid.0.eax = 000000000000000000000000000010 11cpuid.0.ebx = 01110101011011 1001100101010001 11cpuid.0.ecx = 01101100011001010111010001101110cpuid.0.edx = 010010010110010101101110011010 01cpuid.1.eax = 000000000000000100000110011100 01cpuid.1.ebx = 00000010000000010000100000000000cpuid.1.ecx = 10000010100110000010001000000011cpuid.1.edx = 000001111000101111 11101111111111smbios.reflectHost = TRUEhw.model = MacBookPro14,3board-id = Mac-551B86E5744E2388keyboard.vusb.enable = TRUEmouse.vusb.enable = TRUE</code></pre><p>系统安装过程注意事项：  </p><p>1、安装过程先选择“磁盘工具”，把要安装系统的磁盘抹掉  </p><p>2、返回安装界面–选择“安装macOS  </p><p>3、后面都是简单设置即可进入系统  </p><p><a href="https://dortania.github.io/OpenCore-Install-Guide/">MacOC引导安装指南 OpenCore Install Guide</a><br><a href="https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/">黑果小兵的部落阁(OS下载源)</a><br><a href="https://www.tonymacx86.com/nvidia-drivers/">显卡驱动下载</a>  </p>]]></content>
     
@@ -38,7 +38,7 @@
     <category term="操作系统" scheme="https://cdzonline.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="macOS VMware Workstation AMD" scheme="https://cdzonline.github.io/tags/macOS-VMware-Workstation-AMD/"/>
+    <category term="macOS,VMware Workstation,AMD" scheme="https://cdzonline.github.io/tags/macOS-VMware-Workstation-AMD/"/>
     
   </entry>
   
