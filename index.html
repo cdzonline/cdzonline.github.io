@@ -71,6 +71,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-WIN10任务计划程序无法启动解决方案" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/12/30/WIN10%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="article-date">
+  <time datetime="2021-12-29T18:09:18.000Z" itemprop="datePublished">2021-12-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/30/WIN10%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">WIN10任务计划程序无法启动解决方案</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我的电脑一般设定晚上0点自动关机，这两天发现这个设定没用了。打开“任务计划程序”，马上弹出窗口，提示“无法连接远程计算机”。What the fuck? 我这是本地计算机，哪需要远程连接？未知问题问百度，百度哥告诉我说：“打开Task Scheduler服务即可“。So easy?Let me see.  </p>
+<p>打开“服务”窗口，找到这一项，该死，这是灰色选项。咳咳..万能的百度哥告诉我第二个方案，修改注册表。  </p>
+<pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Schedule]
+
+&quot;Start&quot;=dword:00000002
+</code></pre>
+<p>打开Regedit.exe找到这项，把数值改成“2”，重启电脑即可。当然，你也把这段代码直接保存为批处理格式.bat双击导入注册表。</p>
+<p><em>注：同时，要确保系统中“Remote Procedure Call （RPC）”和“WINDOWS EVENTS LOG”两项服务正常启动。</em></p>
+<p>为了保证100%成功，百度哥还告诉我第三个方案。真有100%解决问题的办法吗？当然有，重装系统。……哈哈，这是个笑话。</p>
+<h3 id="方案三："><a href="#方案三：" class="headerlink" title="方案三："></a>方案三：</h3><pre><code>CMD-&gt;输入netsh winsock reset-&gt;回车
+</code></pre>
+<p><em>注：此操作需上升到管理员权限</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cdzonline.github.io/2021/12/30/WIN10%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" data-id="ckxrw13qa0003xk7w0o8jf31a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Task-Scheduler/" rel="tag">Task Scheduler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Win10/" rel="tag">Win10</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F/" rel="tag">任务计划程序</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-导航栏二级菜单HTML代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/12/30/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95HTML%E4%BB%A3%E7%A0%81/" class="article-date">
@@ -101,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/2021/12/30/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95HTML%E4%BB%A3%E7%A0%81/" data-id="ckxrsfeqm0007rw7w6ooq20ae" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/30/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95HTML%E4%BB%A3%E7%A0%81/" data-id="ckxrw13qn000xxk7w6ged72cs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" rel="tag">导航栏二级菜单</a></li></ul>
@@ -288,7 +344,7 @@ txt.onblur = function()&#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/2021/12/30/%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E4%B9%8B%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2%E6%A8%A1%E6%9D%BF/" data-id="ckxrsfeqt000qrw7w2t68g2in" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/30/%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E4%B9%8B%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2%E6%A8%A1%E6%9D%BF/" data-id="ckxrw13qm000uxk7w434ufx49" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%A0%8F%E4%BB%A3%E7%A0%81/" rel="tag">搜索栏代码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81/" rel="tag">网页代码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/" rel="tag">聚合搜索</a></li></ul>
@@ -363,7 +419,7 @@ hexo clean &amp;&amp; hexo g  //清空缓存并生成静态文件
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/2021/12/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E9%9A%8F%E8%AE%B0/" data-id="ckxrsfeqj0003rw7whzuqex2n" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E9%9A%8F%E8%AE%B0/" data-id="ckxrw13q80001xk7wdcmm7pqd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">Hexo博客搭建</a></li></ul>
@@ -428,7 +484,7 @@ mouse.vusb.enable = TRUE
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/" data-id="ckxrsfeqo0009rw7wbe9v2tos" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/" data-id="ckxrw13qd0007xk7wbe1i7kcn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMD/" rel="tag">AMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VMware-Workstation/" rel="tag">VMware Workstation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li></ul>
@@ -471,7 +527,7 @@ mouse.vusb.enable = TRUE
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/2021/12/27/%E4%B8%96%E4%B8%8A%E6%97%A0%E9%9A%BE%E4%BA%8B/" data-id="ckxrsfeqh0001rw7wf37j49fa" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/27/%E4%B8%96%E4%B8%8A%E6%97%A0%E9%9A%BE%E4%BA%8B/" data-id="ckxrw13qm000txk7w8vwzh0kb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E8%83%BD%E9%87%8F/" rel="tag">正能量</a></li></ul>
@@ -503,7 +559,7 @@ mouse.vusb.enable = TRUE
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AMD/" rel="tag">AMD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">Hexo博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware-Workstation/" rel="tag">VMware Workstation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" rel="tag">导航栏二级菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%A0%8F%E4%BB%A3%E7%A0%81/" rel="tag">搜索栏代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E8%83%BD%E9%87%8F/" rel="tag">正能量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81/" rel="tag">网页代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/" rel="tag">聚合搜索</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AMD/" rel="tag">AMD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">Hexo博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Task-Scheduler/" rel="tag">Task Scheduler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware-Workstation/" rel="tag">VMware Workstation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win10/" rel="tag">Win10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/" rel="tag">macOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F/" rel="tag">任务计划程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%B1%E5%BF%97/" rel="tag">励志</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" rel="tag">导航栏二级菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%A0%8F%E4%BB%A3%E7%A0%81/" rel="tag">搜索栏代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E8%83%BD%E9%87%8F/" rel="tag">正能量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81/" rel="tag">网页代码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/" rel="tag">聚合搜索</a></li></ul>
     </div>
   </div>
 
@@ -513,7 +569,7 @@ mouse.vusb.enable = TRUE
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">Hexo博客搭建</a> <a href="/tags/VMware-Workstation/" style="font-size: 10px;">VMware Workstation</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 10px;">励志</a> <a href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" style="font-size: 10px;">导航栏二级菜单</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E6%A0%8F%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">搜索栏代码</a> <a href="/tags/%E6%AD%A3%E8%83%BD%E9%87%8F/" style="font-size: 10px;">正能量</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">网页代码</a> <a href="/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">聚合搜索</a>
+      <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">Hexo博客搭建</a> <a href="/tags/Task-Scheduler/" style="font-size: 10px;">Task Scheduler</a> <a href="/tags/VMware-Workstation/" style="font-size: 10px;">VMware Workstation</a> <a href="/tags/Win10/" style="font-size: 10px;">Win10</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">任务计划程序</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 10px;">励志</a> <a href="/tags/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" style="font-size: 10px;">导航栏二级菜单</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E6%A0%8F%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">搜索栏代码</a> <a href="/tags/%E6%AD%A3%E8%83%BD%E9%87%8F/" style="font-size: 10px;">正能量</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">网页代码</a> <a href="/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">聚合搜索</a>
     </div>
   </div>
 
@@ -535,6 +591,10 @@ mouse.vusb.enable = TRUE
       <ul>
         
           <li>
+            <a href="/2021/12/30/WIN10%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">WIN10任务计划程序无法启动解决方案</a>
+          </li>
+        
+          <li>
             <a href="/2021/12/30/%E5%AF%BC%E8%88%AA%E6%A0%8F%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95HTML%E4%BB%A3%E7%A0%81/">导航栏二级菜单HTML代码</a>
           </li>
         
@@ -548,10 +608,6 @@ mouse.vusb.enable = TRUE
         
           <li>
             <a href="/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/">VM虚拟机安装macOS注意事项之AMD篇</a>
-          </li>
-        
-          <li>
-            <a href="/2021/12/27/%E4%B8%96%E4%B8%8A%E6%97%A0%E9%9A%BE%E4%BA%8B/">世上无难事</a>
           </li>
         
       </ul>
