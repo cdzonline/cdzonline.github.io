@@ -15,7 +15,7 @@
 <meta property="og:description" content="&lt;!doctype html&gt; &lt;meta charset&#x3D;&quot;utf-8&quot;&gt; &lt;title&gt;主页&lt;&#x2F;title&gt; &lt;html&gt;&lt;head&gt; &lt;link rel&#x3D;&quot;icon&quot; type&#x3D;&quot;image&#x2F;x-icon&quot; href&#x3D;&quot;png&#x2F;favicon.i">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-29T16:48:09.000Z">
-<meta property="article:modified_time" content="2021-12-29T16:56:09.017Z">
+<meta property="article:modified_time" content="2021-12-29T16:58:01.093Z">
 <meta property="article:author" content="Nichloas Chen">
 <meta property="article:tag" content="网页代码">
 <meta property="article:tag" content="聚合搜索">
@@ -173,9 +173,14 @@ txt.value = &quot;&quot;;
 //为搜索框注册失去焦点事件
 txt.onblur = function()&#123;
 //在失去焦点的时候如果搜索框内容为空,就让搜索框显示默认关键字
-</code></pre>
-<p>   if (txt.value == “”) {<br>   this.value = keyword;<br>   this.style.color = “#888”;<br>    }<br>    }<br>    }</p>
-<pre><code>&lt;/script&gt;
+  if (txt.value == &quot;&quot;) &#123;
+  this.value = keyword;
+  this.style.color = &quot;#888&quot;;
+&#125;
+&#125;
+&#125;
+  
+&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;div id=&quot;search&quot;&gt;
@@ -244,7 +249,7 @@ txt.onblur = function()&#123;
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/2021/12/30/%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E4%B9%8B%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2%E6%A8%A1%E6%9D%BF/" data-id="ckxrs5ra2000hio7w7ojgcotr" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/30/%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E4%B9%8B%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2%E6%A8%A1%E6%9D%BF/" data-id="ckxrs863h0003rg7w6ia75sga" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%A0%8F%E4%BB%A3%E7%A0%81/" rel="tag">搜索栏代码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81/" rel="tag">网页代码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/" rel="tag">聚合搜索</a></li></ul>
