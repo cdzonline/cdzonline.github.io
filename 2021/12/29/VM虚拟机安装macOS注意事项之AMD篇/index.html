@@ -5,20 +5,20 @@
   
 
   
-  <title>about | 一条难走的路</title>
+  <title>VM虚拟机安装macOS注意事项之AMD篇 | 一条难走的路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://cdzonline.github.io/about/index.html">
+  <meta name="description" content="VM虚拟机需要安装unlocker3.0（最新版）才能破解并安装macOS,程序可到Github下载VM虚拟机安装：选择Workstation 10.x   虚拟机设置：USB控制器–选择USB2.0并显示所有USB设备 打开macOS虚拟机安装目录，修改.vmx文件—-保存   smc.version &#x3D; 0 cpuid.0.eax &#x3D; 00000000000000000000000000001">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VM虚拟机安装macOS注意事项之AMD篇">
+<meta property="og:url" content="https://cdzonline.github.io/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/index.html">
 <meta property="og:site_name" content="一条难走的路">
+<meta property="og:description" content="VM虚拟机需要安装unlocker3.0（最新版）才能破解并安装macOS,程序可到Github下载VM虚拟机安装：选择Workstation 10.x   虚拟机设置：USB控制器–选择USB2.0并显示所有USB设备 打开macOS虚拟机安装目录，修改.vmx文件—-保存   smc.version &#x3D; 0 cpuid.0.eax &#x3D; 00000000000000000000000000001">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2021/12/28/pKvM1ZsdfaYzn5X.png">
-<meta property="article:published_time" content="2021-12-27T11:38:18.000Z">
-<meta property="article:modified_time" content="2021-12-28T08:41:25.363Z">
+<meta property="article:published_time" content="2021-12-29T15:50:32.000Z">
+<meta property="article:modified_time" content="2021-12-29T16:03:53.119Z">
 <meta property="article:author" content="Nichloas Chen">
-<meta property="article:tag" content="散热风扇 信息技术 摄影分享 户外骑行">
+<meta property="article:tag" content="macOS VMware Workstation AMD">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2021/12/28/pKvM1ZsdfaYzn5X.png">
   
     <link rel="alternate" href="/atom.xml" title="一条难走的路" type="application/atom+xml">
   
@@ -71,12 +71,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-VM虚拟机安装macOS注意事项之AMD篇" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/about/index.html" class="article-date">
-  <time datetime="2021-12-27T11:38:18.000Z" itemprop="datePublished">2021-12-27</time>
+    <a href="/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/" class="article-date">
+  <time datetime="2021-12-29T15:50:32.000Z" itemprop="datePublished">2021-12-29</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -85,7 +89,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      VM虚拟机安装macOS注意事项之AMD篇
     </h1>
   
 
@@ -93,18 +97,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://s2.loli.net/2021/12/28/pKvM1ZsdfaYzn5X.png" alt="cdz.png"></p>
+        <p>VM虚拟机需要安装unlocker3.0（最新版）才能破解并安装macOS,程序可到Github下载<br>VM虚拟机安装：选择Workstation 10.x  </p>
+<p>虚拟机设置：USB控制器–选择USB2.0并显示所有USB设备</p>
+<p>打开macOS虚拟机安装目录，修改.vmx文件—-保存  </p>
+<pre><code>smc.version = 0
+cpuid.0.eax = 000000000000000000000000000010 11
+cpuid.0.ebx = 01110101011011 1001100101010001 11
+cpuid.0.ecx = 01101100011001010111010001101110
+cpuid.0.edx = 010010010110010101101110011010 01
+cpuid.1.eax = 000000000000000100000110011100 01
+cpuid.1.ebx = 00000010000000010000100000000000
+cpuid.1.ecx = 10000010100110000010001000000011
+cpuid.1.edx = 000001111000101111 11101111111111
+smbios.reflectHost = TRUE
+hw.model = MacBookPro14,3
+board-id = Mac-551B86E5744E2388
+keyboard.vusb.enable = TRUE
+mouse.vusb.enable = TRUE
+</code></pre>
+<p>系统安装过程注意事项：  </p>
+<p>1、安装过程先选择“磁盘工具”，把要安装系统的磁盘抹掉  </p>
+<p>2、返回安装界面–选择“安装macOS  </p>
+<p>3、后面都是简单设置即可进入系统  </p>
+<p><a target="_blank" rel="noopener" href="https://dortania.github.io/OpenCore-Install-Guide/">MacOC引导安装指南 OpenCore Install Guide</a><br><a target="_blank" rel="noopener" href="https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/">黑果小兵的部落阁(OS下载源)</a><br><a target="_blank" rel="noopener" href="https://www.tonymacx86.com/nvidia-drivers/">显卡驱动下载</a>  </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cdzonline.github.io/about/index.html" data-id="ckxrqakoq0000287w3ujkfkm9" class="article-share-link">Share</a>
+      <a data-url="https://cdzonline.github.io/2021/12/29/VM%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85macOS%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E4%B9%8BAMD%E7%AF%87/" data-id="ckxrqakos0001287w3zn6bqfp" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS-VMware-Workstation-AMD/" rel="tag">macOS VMware Workstation AMD</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2021/12/27/%E4%B8%96%E4%B8%8A%E6%97%A0%E9%9A%BE%E4%BA%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">世上无难事</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
